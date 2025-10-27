@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+{% block title %}Continue to Next Experiment?{% endblock %}
+{% block content %}
+<p>Would you like to continue to the next experiment?</p>
+<form method="post">
+    <div>
+        <input type="radio" name="continue_to_next" value="True" required> Yes<br>
+        <input type="radio" name="continue_to_next" value="False"> No<br>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+{% endblock %}

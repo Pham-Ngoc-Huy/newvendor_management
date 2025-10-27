@@ -1,0 +1,54 @@
+{% extends "global/Page.html" %}
+{% block title %}Participant Background Form{% endblock %}
+
+{% block content %}
+<h3>Appendix - Participant Background Form</h3>
+<p>Instructions: Please answer the following questions honestly. Your responses are anonymous and will be used only for research purposes. You will be identified only by a participant ID code.</p>
+
+<form method="post">
+    <div>
+        <label for="participant_id">1. Participant ID:</label>
+        <input type="text" id="participant_id" name="participant_id" value="{{ participant.id_in_session }}" readonly>
+    </div>
+
+    <div>
+        <label for="age_group">2. Age Group:</label><br>
+        <input type="checkbox" id="age_18_25" name="age_group" value="18-25"> 18-25<br>
+        <input type="checkbox" id="age_26_35" name="age_group" value="26-35"> 26-35<br>
+        <input type="checkbox" id="age_36_45" name="age_group" value="36-45"> 36-45<br>
+        <input type="checkbox" id="age_46_55" name="age_group" value="46-55"> 46-55<br>
+        <input type="checkbox" id="age_56_above" name="age_group" value="56+"> 56 or above
+    </div>
+
+    <div>
+        <label for="education_background">3. Education Background / Field of Study:</label><br>
+        <input type="checkbox" id="business_economics" name="education_background" value="Business / Economics"> Business / Economics<br>
+        <input type="checkbox" id="engineering_technology" name="education_background" value="Engineering / Technology"> Engineering / Technology<br>
+        <input type="checkbox" id="social_sciences" name="education_background" value="Social Sciences"> Social Sciences<br>
+        <input type="checkbox" id="natural_sciences" name="education_background" value="Natural Sciences"> Natural Sciences<br>
+        <input type="text" id="other_field" name="education_background_other" placeholder="Other (please specify)">
+    </div>
+
+    <div>
+        <label for="prior_experience">4. Prior Experience with Experiments:</label><br>
+        <input type="radio" id="yes" name="prior_experience" value="Yes"> Yes<br>
+        <input type="radio" id="no" name="prior_experience" value="No"> No
+    </div>
+
+    <div>
+        <label for="risk_attitude">5. Risk Attitude:</label><br>
+        <label>I prefer safe choices over risky ones.</label><br>
+        <input type="radio" id="1" name="risk_attitude" value="1"> 1<br>
+        <input type="radio" id="2" name="risk_attitude" value="2"> 2<br>
+        <input type="radio" id="3" name="risk_attitude" value="3"> 3<br>
+        <input type="radio" id="4" name="risk_attitude" value="4"> 4<br>
+        <input type="radio" id="5" name="risk_attitude" value="5"> 5<br>
+        <input type="radio" id="6" name="risk_attitude" value="6"> 6<br>
+        <input type="radio" id="7" name="risk_attitude" value="7"> 7
+    </div>
+
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+{% endblock %}

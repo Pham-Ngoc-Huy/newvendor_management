@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+{% block title %}Results{% endblock %}
+{% block content %}
+<div class="grid">
+  <div>
+    <h3>Your Results (Round {{ player.round_number }})</h3>
+    <ul>
+      <li>Order (q): {{ q }}</li>
+      <li>Demand (D): {{ d }}</li>
+      <li>Units sold: {{ sales }}</li>
+      <li>Unsold: {{ unsold }}</li>
+      <li><b>Profit:</b> {{ profit }}</li>
+    </ul>
+  </div>
+
+  {% if show_comp_profit %}
+  <div>
+    <h3>Competitor’s Profit (Round {{ player.round_number }})</h3>
+    <p><b>{{ comp_profit }}</b></p>
+  </div>
+  {% endif %}
+</div>
+
+{% if show_pct_text %}
+<p style="margin-top:1rem">{{ comparison_text }}</p>
+{% endif %}
+
+{{ next_button }}
+{% endblock %}

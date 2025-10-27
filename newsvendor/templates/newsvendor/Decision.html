@@ -1,0 +1,10 @@
+{% extends "global/Page.html" %}
+{% block title %}Order Decision{% endblock %}
+{% block content %}
+<p>Selling price: {{ price }} | Purchase cost: {{ cost }}</p>
+<p>Demand each round is drawn uniformly between {{ dmin }} and {{ dmax }}.</p>
+<p>If you run out of stock, {{ phi_pct }}% of unmet demand may switch to your competitor (and vice versa).</p>
+<p>You have <b>{{ C.DECISION_TIMEOUT }}</b> seconds per decision.</p>
+{{ formfields }}
+{{ next_button }}
+{% endblock %}
